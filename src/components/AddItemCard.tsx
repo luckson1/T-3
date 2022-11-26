@@ -18,7 +18,8 @@ const AddItemCard = ({ showModalHandler}: AddItemProps) => {
   const handleSubmit=useCallback((e: React.MouseEvent<HTMLButtonElement, MouseEvent>, input:string) => {
     e.preventDefault()
 addItem({ name: input });
-  },[])
+setInput("")
+  },[setInput, addItem])
   return (
     <div className=" relative top-0 left-[600px] flex h-48 w-72 flex-col rounded-md bg-white shadow-2xl ">
       <input
